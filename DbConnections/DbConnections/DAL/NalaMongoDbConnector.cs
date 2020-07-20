@@ -1,10 +1,6 @@
 ﻿using DbConnections.Models;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DbConnections.DAL
 {
@@ -33,29 +29,6 @@ namespace DbConnections.DAL
             NalaWalksCollectionName = config.GetSection("walks").ToString();
             _walks = Database.GetCollection<Walk>(NalaWalksCollectionName);
         }
-
-        public List<Walk> Get() =>
-            _walks.Find(walk => true).ToList();
-
-
-        public Walk GetWalkByIg(string id) =>
-            _walks.Find<Walk>(walk => walk.Id == id).FirstOrDefault();
-
-        
-        public Walk CreateWalk(Walk walk)
-        {
-            _walks.InsertOne(walk);
-            return walk;
-        }
-
-
-        public void UpdateWalk(string id, Walk walkIn) =>
-            _walks.ReplaceOne(walk => walk.Id == id, walkIn);
-
-            
-
-        public void RemoveWalk(Walk walkIn) =>
-            _walks.DeleteOne(walk => walk.Id == walkIn.Id);
-        
+       
     }
 }

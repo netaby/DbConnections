@@ -12,7 +12,7 @@ namespace DbConnections.DAL
 
         List<T> Get();
         T GetByIg(string id);
-        T CreateToy(T toCreate);
+        T Create(T toCreate);
         void Update(string id, T toyIn);
         void Remove(T toRemove);
     }

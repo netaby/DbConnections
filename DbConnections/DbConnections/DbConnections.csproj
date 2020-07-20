@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="DAL\INalalMongoCollection.cs" />
+    <Compile Include="DAL\INalaMongoDbConnector.cs" />
+    <Compile Include="DAL\NalaMongoDbConnector.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
