@@ -24,6 +24,11 @@ namespace DbConnections
 
         public IConfigurationRoot Configuration { get; }
 
+        public Startup(IConfigurationRoot config)
+        {
+            Configuration = config;
+        }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
