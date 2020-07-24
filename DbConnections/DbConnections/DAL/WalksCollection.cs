@@ -12,12 +12,12 @@ namespace DbConnections.DAL
     {
             public INalaMongoDbConnector nalaDbConnector { get; set; }
             public IMongoCollection<Walk> _collection { get; set; }
-            public string NalaToysCollectionName { get; set; }
+            public string NalaCollectionName { get; set; }
             public WalksCollection(INalaMongoDbConnector dbConnector, IConfiguration config)
             {
-                NalaToysCollectionName = config.GetSection("Walks").ToString();
+                NalaCollectionName = config.GetSection("Walks").ToString();
                 nalaDbConnector = dbConnector;
-                _collection = nalaDbConnector.Database.GetCollection<Walk>(NalaToysCollectionName);
+                _collection = nalaDbConnector.Database.GetCollection<Walk>(NalaCollectionName);
 
             }
 

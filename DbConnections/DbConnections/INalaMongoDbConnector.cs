@@ -10,8 +10,6 @@ namespace DbConnections.DAL
     {
         string ConnectionString { get; set; }
         string DatabaseName { get; set; }
-        string NalaToysCollectionName { get; set; }
-        string NalaWalksCollectionName { get; set; }
         IMongoDatabase Database { get; set; }
 
     }

@@ -5,9 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="DAL\INalalMongoCollection.cs" />
-    <Compile Include="DAL\INalaMongoDbConnector.cs" />
-    <Compile Include="DAL\NalaMongoDbConnector.cs" />
+    <Compile Remove="DAL\INalaMongoCollection.cs" />
+    <Compile Remove="INalaMongoDbCollection.cs" />
+    <Compile Remove="INalaMongoDbConnector.cs" />
+    <Compile Remove="NalaMongoDbConnector.cs" />
   </ItemGroup>
 
   <ItemGroup>
